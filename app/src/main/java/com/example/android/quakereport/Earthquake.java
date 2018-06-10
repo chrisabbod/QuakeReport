@@ -9,7 +9,7 @@ public class Earthquake {
     private String mLocation;
 
     /** Date of the earthquake */
-    private String mDate;
+    private long mTimeInMilliseconds;
 
     /**
      *
@@ -17,10 +17,10 @@ public class Earthquake {
      * @param location is the city location of the earthquake
      * @param date is the date the earthquake happened
      */
-    public Earthquake(String magnitude, String location, String date){
+    public Earthquake(String magnitude, String location, long timeInMilliseconds){
         mMagnitude = magnitude;
         mLocation = location;
-        mDate = date;
+        mTimeInMilliseconds = timeInMilliseconds;
     }
 
     public String getMagnitude() {
@@ -39,11 +39,11 @@ public class Earthquake {
         this.mLocation = mLocation;
     }
 
-    public String getDate() {
-        return mDate;
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
     }
 
-    public void setDate(String mDate) {
-        this.mDate = mDate;
+    public void setTimeInMilliseconds(long mTimeInMilliseconds) {
+        this.mTimeInMilliseconds = mTimeInMilliseconds;
     }
 }
